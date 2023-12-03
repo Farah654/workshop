@@ -1,0 +1,14 @@
+@import "../../assets/sass/styles.scss";
+h1 {
+  margin: 0;
+  font-family: system-ui;
+}
+h2 {
+  font-size: 0.9rem;
+  margin: 0;
+  font-family: system-ui;
+}
+
+.light-gray {
+  color: $light-gray;
+}

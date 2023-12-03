@@ -1,0 +1,15 @@
+<div>
+  <select
+    class="currency-dropdown light-gray width-15 pt-25 pb-25 pr-7 pl-1 mb-31 font-size-27"
+    id="dropdown1"
+    name="dropdown1"
+    (change)="selectCurrency($event)"
+
+
+    [(ngModel)]="selectedOption"
+  >
+    <option *ngFor="let option of options$ | async" [value]="option.value">
+      {{ option.value }}
+    </option>
+  </select>
+</div>

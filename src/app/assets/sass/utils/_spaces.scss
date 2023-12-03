@@ -1,0 +1,96 @@
+$spaces-map: (
+  "0": 0,
+
+  "1": 1rem,
+  "2": 2rem,
+  "3": 3rem,
+  "4": 4rem,
+  "5": 5rem,
+  "6": 6rem,
+  "7": 7rem,
+  
+
+  "11" : 11rem,
+  "12": 12rem,
+  "15": 15rem,
+
+
+  "22": 0.2rem,
+  "23": 0.3rem,
+  "25": 0.5rem,
+  "27": 0.7rem,
+
+
+  "31": 1.5rem,
+);
+
+@each $space, $value in $spaces-map {
+  .m-#{$space} {
+    margin: $value;
+  }
+
+  .mt-#{$space} {
+    margin-top: $value;
+  }
+
+  .mr-#{$space} {
+    margin-right: $value;
+  }
+
+  .mb-#{$space} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$space} {
+    margin-left: $value;
+  }
+
+  .mx-#{$space} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .my-#{$space} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .p-#{$space} {
+    padding: $value;
+  }
+
+  .pt-#{$space} {
+    padding-top: $value;
+  }
+
+  .pr-#{$space} {
+    padding-right: $value;
+  }
+
+  .pb-#{$space} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$space} {
+    padding-left: $value;
+  }
+
+  .px-#{$space} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .py-#{$space} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+  .gap-#{$space} {
+    gap: $value;
+  }
+  .font-size-#{$space} {
+    font-size: $value;
+  }
+  .width-#{$space}{
+    width:$value;
+  }
+}

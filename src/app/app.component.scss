@@ -1,0 +1,17 @@
+@import "../app/assets/sass/styles.scss";
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 2fr 3fr;
+  height: 100vh;
+
+  &--wrapper {
+    &__dropDown-chart-wrapper {
+      &__dropdown {
+        margin-top: 9rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

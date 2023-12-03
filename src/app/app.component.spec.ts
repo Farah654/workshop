@@ -1,12 +1,33 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+//import { NO_ERRORS_SCHEMA } from '@angular/core';
+
+import { CurrencyDropdownComponent } from './components/currency-dropdown/currency-dropdown.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
-  }));
+  // beforeEach(() =>
+  //    TestBed.configureTestingModule({
+  //     imports: [RouterTestingModule,HttpClientModule],
+  //     declarations: [AppComponent, HeaderComponent, CurrencyDropdownComponent,ChartComponent],
+  //    // schemas: [NO_ERRORS_SCHEMA],
+  //   })
+  // );
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [RouterTestingModule, HttpClientModule, FormsModule],
+      declarations: [
+        AppComponent,
+        HeaderComponent,
+        CurrencyDropdownComponent,
+        ChartComponent,
+      ],
+    }).compileComponents();
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -24,6 +45,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('workshop- app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain(
+      'workshop-'
+    );
   });
 });

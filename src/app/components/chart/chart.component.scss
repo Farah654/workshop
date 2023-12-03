@@ -1,0 +1,99 @@
+@import "../../assets/sass/styles.scss";
+
+.card {
+  font-family: system-ui;
+  width: 35rem;
+  position: relative;
+  box-shadow: 8px 0 10px -6px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+  &--wrapper {
+    &__header-countries {
+      &__header-flags {
+        margin-bottom: 0.5rem;
+
+        .currency-flag {
+          border-radius: 50%;
+          object-fit: cover;
+          width: 2rem;
+          height: 2rem;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .button {
+          padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+          border-radius: 0.9rem;
+          font-size: 0.6rem;
+        }
+        .website {
+          
+            .button {
+              font-weight: 700;
+            
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -0.03125;
+          width: 0.03125;
+          background: rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      &__exchangeRate {
+        margin-top: 2rem;
+      }
+    }
+
+    &__header-countries__header-flags_header-names {
+      b {
+        text-transform: uppercase;
+      }
+    }
+
+    &__header-countries__header-exchangeRate {
+      .exchangeRate-amount {
+        font-weight: 900;
+      }
+
+      .exchangeRate-percentage {
+        color: $neon-green;
+      }
+    }
+
+    &__chart {
+      .chart-buttons {
+        .chart-button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+          font-size: 0.7rem;
+          border-radius: 0.3rem;
+        }
+
+        .chart-button.selected {
+          background-color: #b1e9fe;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+.light-gray {
+  color: $light-gray;
+}
+.lighter-gray-bg {
+  background-color: $lighter-gray;
+}
+.neon-green {
+  color: $neon-green;
+}
+.light-blue {
+  color: $light-blue;
+}

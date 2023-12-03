@@ -1,0 +1,17 @@
+$colors-map: (
+  "black": $black,
+  "light-gray": $light-gray,
+  "lighter-gray":$lighter-gray,
+  "neon-green": $neon-green,
+  "light-blue": $light-blue,
+  
+);
+
+@each $name, $hex-value in $colors-map {
+  .#{name} {
+    color: $hex-value;
+  }
+  .#{name}-bg {
+    background-color: $hex-value;
+  }
+}

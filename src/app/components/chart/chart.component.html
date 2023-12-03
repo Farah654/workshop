@@ -1,0 +1,50 @@
+
+<div class="card card--wrapper m-1 ml-3 mt-3">
+  <div class="card__header flex justify_content_spacebetween">
+    <div
+      class="card--wrapper__header-countries justify_content_spacebetween pt-1"
+    >
+      <div class="card--wrapper__header-countries__header-flags flex gap-25">
+        <div
+          class="currency-flag currency-flag-{{ currencyFrom | lowercase }}"
+        ></div>
+
+        <div
+          class="currency-flag currency-flag-{{ currencyTo | lowercase }}"
+        ></div>
+        <div class="website light-gray">
+          <div class="button lighter-gray-bg font-family">Forex.com</div>
+        </div>
+      </div>
+
+      <div
+        class="card--wrapper__header-countries__header-flags_header-names"
+        id="chartHeader"
+        on
+      >
+        <b
+          >{{ currencyFrom | uppercase}} / {{ currencyTo  | uppercase }}
+        </b>
+      </div>
+    </div>
+    <div class="card--wrapper__header-countries__header-exchangeRate mt-2 mr-1">
+      <div class="exchangeRate-amount font-family">${{ exchangeRate }}</div>
+      <div class="exchangeRate-percentage neon-green">
+        {{ exchangeRatePercentage }}%
+      </div>
+    </div>
+  </div>
+  <div class="card--wrapper__chart pb-1">
+    <canvas #myChart id="myChart" width="400" height="200"></canvas>
+    <div class="chart-buttons flex center gap-3">
+      <button
+        *ngFor="let labels of  timeIntervals"
+        (click)="selectInterval(labels)"
+        class="chart-button"
+        [class.selected]="timeInterval === labels"
+      >
+        {{ labels }}
+      </button>
+    </div>
+  </div>
+</div>
